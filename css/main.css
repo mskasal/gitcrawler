@@ -139,7 +139,7 @@ nav a:hover {
 
 .container {
     margin:0 auto;
-	background-color:#0080FF;
+	background-color:#4489ce;
     width:100%;
     height:100%;
 }
@@ -161,7 +161,7 @@ nav a:hover {
 }
 
 .user div {
-	padding:3px;
+	padding:2px;
     width:100%;
     display:inline-block;
 }

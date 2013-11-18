@@ -7,7 +7,7 @@ var Git = function () {
         user: '<il class="user"> \
 				<div class="content"> \
 					<img src="http://www.gravatar.com/avatar/{{gravatar_id}}"> \
-					<div class="userName" value={{username}}><span>User Name:</span> {{username}}</div> \
+					<div class="userName" data-val={{username}}><span>User Name:</span> {{username}}</div> \
 					<div class="location"><span>Location:</span> {{location}}</div> \
 					<div class="language"><span>Language:</span> {{language}}</div> \
 					<div class="follwers"><span>Followers:</span> {{followers_count}}</div> \
@@ -65,7 +65,7 @@ Git.prototype.init = function () {
     "use strict";
     
     var that = this,
-        userInfo = that.getUserInfoWithLocation("turkey", "repositories");
+        userInfo = that.getUserInfoWithLocation("istanbul", "repositories");
     userInfo.done(function (response) {
         that.renderList(response);
     }).then(function () {
@@ -96,7 +96,7 @@ Git.prototype.bind = function () {
     "use strict";
     var that = this;
     $('.user').on("click", function () {
-        var login = $(this).find('.userName').data('value'),
+        var login = $(this).find('.userName').data('val'),
             user = that.getUserInfo(login);
         user.done(function (response) {
             console.log(response);
