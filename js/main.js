@@ -69,7 +69,7 @@ Git.prototype.init = function () {
     userInfo.done(function (response) {
         that.renderList(response);
     }).then(function () {
-    	that.bind();
+        that.bind();
     });
     
     
@@ -95,13 +95,16 @@ Git.prototype.renderList = function (userListOBJ) {
 Git.prototype.bind = function () {
     "use strict";
     var that = this;
-    $('.user').on("click",function () {
+    $('.user').on("click", function () {
         var login = $(this).find('.userName').data('value'),
             user = that.getUserInfo(login);
         user.done(function (response) {
             console.log(response);
         });
+        
     });
+    
+    
 };
 
 var git = new Git();
