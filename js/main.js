@@ -65,7 +65,7 @@ Git.prototype.init = function () {
     "use strict";
     
     var that = this,
-        userInfo = that.getUserInfoWithLocation("istanbul", "repositories");
+        userInfo = that.getUserInfoWithLocation("turkey", "repositories");
     userInfo.done(function (response) {
         that.renderList(response);
     }).then(function () {
