@@ -49,7 +49,7 @@ Git.prototype.getUsersList = function (since) {
 Git.prototype.getUserInfoWithLocation = function (location, sort) {
     "use strict";
     var that = this,
-        userInfo = new that.Ajax("GET", "https://api.github.com/legacy/user/search/location%3A" + location + "?type=user", {type: "user", sort: sort, access_token: "8e2cd2c3b60bd174564635b04b8df1b42f4e8d44"});
+        userInfo = new that.Ajax("GET", "https://api.github.com/legacy/user/search/location:" + location + "?type=user", {start_page:1,sort: sort, access_token: "8e2cd2c3b60bd174564635b04b8df1b42f4e8d44"});
     
     return userInfo;
 };
