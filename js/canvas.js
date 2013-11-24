@@ -42,6 +42,6 @@ ctx.fillRect(200, 150, 800, 600);
 
 ctx.fillStyle = "fff";
 ctx.beginPath();
-ctx.arc(240, 170, 3, 0, Math.PI*2, true);
+ctx.arc(240, 170, 3, 0, Math.PI * 2, true);
 ctx.closePath();
 ctx.fill();
